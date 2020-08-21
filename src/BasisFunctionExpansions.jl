@@ -39,6 +39,8 @@ end
 
 function (bfa::BasisFunctionApproximation)(v)
     A = bfa.bfe(v)
+    @show size(A)
+    @show size(bfa.linear_combination)
     return A*bfa.linear_combination
 end
 
@@ -407,7 +409,7 @@ end
 
 
 ## Plot tools ==================================================================
-include("plotting.jl")
+# include("plotting.jl")
 include("dynamics.jl")
 # plot
 
